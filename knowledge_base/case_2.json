@@ -1,0 +1,196 @@
+{
+"case_id": "2025-CISTM-0116",
+"case_name": "Ermita Bar Assault – Elias vs David",
+
+"canonical_solution": {
+"perpetrator": "Elias Cruz",
+"motive": "Alcohol-fueled confrontation, escalated to physical assault",
+"method": "Struck victim David Garcia on the head with a glass bottle",
+"key_connections": [
+"CCTV clip shows Elias raising bottle and striking victim",
+"Wound photos consistent with glass shard penetration",
+"Bottle fragments match wound angle",
+"Latent fingerprint on bottle fragment matches Elias",
+"Victim blood swab consistent with wound location"
+]
+},
+
+"required_evidence": {
+"critical": [
+{
+"id": "E002",
+"name": "CCTV Footage – Bar Cam1",
+"why_critical": "Shows the assault sequence",
+"key_data": "09:30:12 Elias raises bottle, victim collapses"
+},
+{
+"id": "E003",
+"name": "Victim Wound Photos",
+"why_critical": "Demonstrates physical injury pattern consistent with glass",
+"key_data": "Temporal laceration with penetration marks"
+},
+{
+"id": "E005",
+"name": "Bottle Fragments",
+"why_critical": "Weapon fragments recovered at scene",
+"key_data": "Fragments match wound dimensions"
+},
+{
+"id": "E006",
+"name": "Latent Fingerprint on Bottle",
+"why_critical": "Places suspect on weapon",
+"key_data": "AFIS match: Elias Cruz, 98% confidence"
+}
+],
+"supporting": [
+{
+"id": "E001",
+"name": "Suspect Buccal Swab",
+"importance": "Reference DNA for future comparison"
+},
+{
+"id": "E004",
+"name": "Victim Blood Swab",
+"importance": "Serology/DNA confirmation of wound source"
+}
+]
+},
+
+"procedural_requirements": {
+"chain_of_custody": {
+"required_fields": [
+"Case number",
+"Collector name",
+"Date/time of collection",
+"Sample/device description",
+"Hash value"
+],
+"violation_impact": "Break weakens admissibility of evidence"
+},
+"dna_collection": {
+"standard": "RA 9165 Sec. 21",
+"requirement": "Collected under consent, stored in tamper-evident container",
+"violation_impact": "Sample may be excluded or questioned"
+},
+"cctv_recovery": {
+"correct_method": "Recover via DVR export or certified forensic tool",
+"violation_impact": "Authenticity of footage may be challenged"
+}
+},
+
+"legal_framework": {
+"applicable_laws": {
+"RPC_263": {
+"violation": "Serious Physical Injuries",
+"penalty": "Prision mayor depending on medical findings"
+},
+"RA_9165": {
+"reference": "DNA sample custody standard compliance"
+}
+},
+"prosecution_requirements": [
+"Show victim sustained serious physical injury",
+"Link injury to assault act by Elias",
+"Authenticate CCTV footage and forensic recovery",
+"Correlate wound photos with bottle fragments",
+"Fingerprint places weapon in Elias’s possession"
+]
+},
+
+"evaluation_criteria": {
+"hypothesis_scoring": {
+"perpetrator_identification": {
+"points": 30,
+"check": "Did player identify Elias as attacker?"
+},
+"motive_understanding": {
+"points": 10,
+"check": "Did player cite confrontation context?"
+},
+"evidence_correlation": {
+"points": 40,
+"check": "Did player connect CCTV, wounds, fragments, fingerprints?"
+},
+"method_explanation": {
+"points": 20,
+"check": "Did player explain how bottle caused injury?"
+}
+},
+"evidence_quality": {
+"all_critical_present": 40,
+"proper_hash_verification": 20,
+"chain_of_custody_complete": 20,
+"procedural_compliance": 20
+}
+},
+
+"attorney_critique_templates": {
+"missing_evidence": {
+"critical_missing": "CRITICAL ERROR: Missing {evidence_name}. Cannot establish assault without it.",
+"supporting_missing": "Missing {evidence_name} reduces corroboration strength."
+},
+"procedural_violations": {
+"no_hash": "CCTV footage without hash — authenticity challenge likely.",
+"chain_broken": "Incomplete chain of custody weakens admissibility.",
+"improper_collection": "Evidence improperly collected (e.g., bottle fragments not sealed)."
+},
+"legal_issues": {
+"no_causation": "If wounds cannot be tied to bottle, causation fails.",
+"no_authentication": "Footage not authenticated → defense can move to suppress."
+},
+"strength_assessment": {
+"strong": "Case solid: CCTV, wounds, weapon fragments, and prints all align.",
+"moderate": "Case prosecutable but vulnerable: {weaknesses}.",
+"weak": "Case has major flaws: {flaws}. Likely dismissal."
+}
+},
+
+"response_scaling": {
+"score_90_plus": {
+"tone": "Commendatory",
+"detail": "Case airtight",
+"example": "Excellent. Evidence aligns with law and procedure."
+},
+"score_70_89": {
+"tone": "Professional",
+"detail": "Good foundation, note some missing items",
+"example": "Strong case but lacking corroboration on {evidence}."
+},
+"score_50_69": {
+"tone": "Concerned",
+"detail": "Detailed issues flagged",
+"example": "Evidence chain gaps and weak witness support reduce strength."
+},
+"score_below_50": {
+"tone": "Warning",
+"detail": "Comprehensive breakdown of failures",
+"example": "Case cannot be prosecuted. Missing core evidence."
+}
+},
+
+"eqs_formula": {
+"definition": "EQS = round(0.35*C + 0.25*H + 0.20*M + 0.10*T + 0.10*S)",
+"components": {
+"C": "Chain-of-custody completeness",
+"H": "Hash/file integrity",
+"M": "Metadata completeness",
+"T": "Timestamp consistency",
+"S": "Supporting corroboration"
+},
+"thresholds": {
+"weak": "<50",
+"moderate": "50–79",
+"strong": "≥80"
+}
+},
+
+"evidence_files": [
+"2025-CISTM-0116_E001_BUCCAL_Elias_v1.txt",
+"2025-CISTM-0116_E002_CCTV_CAM1_0930_v1.txt",
+"2025-CISTM-0116_E003_WOUND_PHOTOS_v1.txt",
+"2025-CISTM-0116_E004_VICTIM_SWAB_v1.txt",
+"2025-CISTM-0116_E005_BOTTLE_FRAGMENTS_v1.txt",
+"2025-CISTM-0116_E006_LATENTPRINT_v1.txt",
+"2025-CISTM-0116_CASE_PACKAGE_v1.txt"
+]
+}

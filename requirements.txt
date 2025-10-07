@@ -1,0 +1,25 @@
+# Production dependencies for Forensic Attorney AI Backend
+
+# FastAPI and ASGI server
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+gunicorn==21.2.0
+
+# Azure OpenAI
+openai==1.3.0
+
+# Configuration and environment
+python-dotenv==1.0.0
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# HTTP and file handling
+python-multipart==0.0.6
+httpx==0.25.1
+
+# Production essentials
+# For structured logging in production
+python-json-logger==2.0.7
+
+# Security
+cryptography==41.0.7

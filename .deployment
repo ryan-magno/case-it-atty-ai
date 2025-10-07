@@ -1,0 +1,5 @@
+# Create .deployment file
+cat > .deployment << 'EOF'
+[config]
+SCM_DO_BUILD_DURING_DEPLOYMENT=true
+EOF

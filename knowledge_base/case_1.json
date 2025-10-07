@@ -1,0 +1,186 @@
+{
+  "case_id": "RW-2025-01",
+  "case_name": "Universidad ng Kanluran Ransomware Attack",
+
+  "canonical_solution": {
+    "perpetrator": "Samuel Jose",
+    "motive": "Revenge for thesis rejection and anger at university corruption",
+    "method": "Deployed ransomware using code from rejected thesis",
+    "key_connections": [
+      "IP address 103.XX.XXX.XX matches between server logs and laptop",
+      "Metadata tag 'PARA_SA_ESTUDYANTE' shows ideological motive",
+      "Thesis code identical to ransomware code",
+      "Former USG Treasurer with system access knowledge"
+    ]
+  },
+
+  "required_evidence": {
+    "critical": [
+      {
+        "id": "2025-RW-UNIK_001_SERVERIMAGE_v1",
+        "name": "Server Image with Hash",
+        "why_critical": "Without hash verification, entire case is inadmissible",
+        "procedural_requirement": "Must use write-blocker during imaging",
+        "common_violation": "Direct file copying without forensic imaging"
+      },
+      {
+        "id": "2025-RW-UNIK_002_SERVERLOGS_v1",
+        "name": "Server Access Logs",
+        "why_critical": "Establishes timeline and origin IP",
+        "key_data": "Unauthorized login at 03:12 AM from 103.XX.XXX.XX"
+      },
+      {
+        "id": "2025-RW-UNIK_003_RANSOMNOTE_v1",
+        "name": "Ransomware Demand",
+        "why_critical": "Proves extortion element for RA 10175",
+        "key_data": "₱20 million cryptocurrency demand"
+      },
+      {
+        "id": "2025-RW-UNIK_006_LAPTOPCOMMANDS_v1",
+        "name": "Suspect's Laptop Commands",
+        "why_critical": "Direct link between suspect and server intrusion",
+        "key_data": "Same IP address as server logs"
+      },
+      {
+        "id": "2025-RW-UNIK_007_THESESIMILARITY_v1",
+        "name": "Thesis Code Comparison",
+        "why_critical": "Proves suspect authored the ransomware",
+        "key_data": "Code blocks identical to ransomware"
+      }
+    ],
+    "supporting": [
+      {
+        "id": "2025-RW-UNIK_004_METADATA_v1",
+        "name": "File Metadata",
+        "importance": "Shows motive through 'PARA_SA_ESTUDYANTE' tag"
+      },
+      {
+        "id": "2025-RW-UNIK_005_CHATLOGS_v1",
+        "name": "Telegram Chats",
+        "importance": "Demonstrates premeditation"
+      }
+    ]
+  },
+
+  "procedural_requirements": {
+    "chain_of_custody": {
+      "required_fields": [
+        "Case number",
+        "Collector name",
+        "Date/time of collection",
+        "Device description",
+        "Hash value"
+      ],
+      "violation_impact": "Evidence becomes inadmissible"
+    },
+    "forensic_imaging": {
+      "correct_method": "Use write-blocker + forensic imaging tool",
+      "generate_hash": "SHA-256 immediately after imaging",
+      "violation_impact": "Defense can claim evidence tampering"
+    },
+    "warrant_compliance": {
+      "required": [
+        "WDCD - Warrant to Disclose Computer Data",
+        "WSSECD - Warrant to Search, Seize & Examine Computer Data"
+      ],
+      "violation_impact": "Illegal search, evidence suppressed"
+    }
+  },
+
+  "legal_framework": {
+    "applicable_laws": {
+      "RA_10175": {
+        "violations": [
+          "Section 4(a)(1) - Illegal Access",
+          "Section 4(a)(3) - Data Interference",
+          "Section 4(b)(3) - Computer-related Fraud"
+        ],
+        "penalty": "12 years imprisonment + ₱50M restitution"
+      },
+      "RPC_315": {
+        "violation": "Estafa in relation to cybercrime",
+        "penalty": "Additional 8 years"
+      }
+    },
+    "prosecution_requirements": [
+      "Prove unauthorized access occurred",
+      "Demonstrate data was encrypted/damaged",
+      "Show extortion demand was made",
+      "Link suspect to the crime through digital evidence",
+      "Maintain evidence integrity throughout"
+    ]
+  },
+
+  "evaluation_criteria": {
+    "hypothesis_scoring": {
+      "perpetrator_identification": {
+        "points": 30,
+        "check": "Did player identify Samuel Jose?"
+      },
+      "motive_understanding": {
+        "points": 20,
+        "check": "Did player mention thesis rejection or corruption revenge?"
+      },
+      "evidence_correlation": {
+        "points": 30,
+        "check": "Did player connect IP addresses and code similarity?"
+      },
+      "method_explanation": {
+        "points": 20,
+        "check": "Did player explain how the attack was executed?"
+      }
+    },
+    "evidence_quality": {
+      "all_critical_present": 40,
+      "proper_hash_verification": 20,
+      "chain_of_custody_complete": 20,
+      "procedural_compliance": 20
+    }
+  },
+
+  "attorney_critique_templates": {
+    "missing_evidence": {
+      "critical_missing": "CRITICAL ERROR: Missing {evidence_name}. This is required to prove {legal_element}. Without it, prosecution under RA 10175 will fail.",
+      "supporting_missing": "Missing {evidence_name} weakens the case but not fatal. Consider obtaining to strengthen {aspect}."
+    },
+    "procedural_violations": {
+      "no_hash": "FATAL: No hash verification on server image. Defense will argue evidence tampering. Case likely inadmissible.",
+      "no_write_blocker": "Serious violation: Direct file copying detected. Original evidence potentially modified. Admissibility questionable.",
+      "chain_broken": "Chain of custody incomplete. Defense can create reasonable doubt about evidence integrity.",
+      "no_warrant": "Evidence obtained without proper WDCD/WSSECD. Will be suppressed as fruit of illegal search."
+    },
+    "legal_issues": {
+      "weak_correlation": "IP address correlation alone is circumstantial. Need stronger link like thesis code match.",
+      "no_extortion_proof": "Without ransom note, cannot prove extortion element of RA 10175.",
+      "timeline_gaps": "Inconsistent timeline between server logs and metadata. Defense will exploit this."
+    },
+    "strength_assessment": {
+      "strong": "Solid case. Hash-verified evidence, complete chain of custody, clear suspect-crime link through IP and code match.",
+      "moderate": "Prosecutable but vulnerabilities exist: {weaknesses}. Address these before trial.",
+      "weak": "Case has critical flaws: {flaws}. High risk of acquittal or mistrial."
+    }
+  },
+
+  "response_scaling": {
+    "score_90_plus": {
+      "tone": "Commendatory",
+      "detail": "Brief confirmation of strengths",
+      "example": "Excellent work. All critical evidence present with proper procedures. Clear path to conviction under RA 10175."
+    },
+    "score_70_89": {
+      "tone": "Professional with minor corrections",
+      "detail": "Point out specific gaps",
+      "example": "Good foundation but missing {evidence}. Also, ensure {procedure} is documented for admissibility."
+    },
+    "score_50_69": {
+      "tone": "Concerned but constructive",
+      "detail": "Detailed explanation of problems",
+      "example": "Significant issues detected. {violations} make prosecution risky. Must address: {required_actions}"
+    },
+    "score_below_50": {
+      "tone": "Serious warning",
+      "detail": "Comprehensive breakdown of failures",
+      "example": "Case not prosecutable in current state. Critical failures: {list}. Return to investigation."
+    }
+  }
+}
